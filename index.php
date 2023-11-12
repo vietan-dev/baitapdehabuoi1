@@ -244,6 +244,25 @@
     // Hiển thị mảng sau khi thêm phần tử
     echo "Mảng sau khi thêm phần tử vào đầu và cuối: ";
     print_r($mangDuLieu);
+    // 21
+    function timSoLonThuHai($mang) {
+        // Sắp xếp mảng theo thứ tự giảm dần
+        rsort($mang);
+        
+        // Lấy phần tử lớn thứ hai
+        $soLonThuHai = $mang[1];
+        
+        return $soLonThuHai;
+    }
+    
+    // Mảng ví dụ
+    $mangDuLieu = array(5, 2, 8, 1, 6);
+    
+    // Gọi hàm để tìm số lớn thứ hai
+    $soLonThuHai = timSoLonThuHai($mangDuLieu);
+    
+    // Hiển thị kết quả
+    echo "Số lớn thứ hai trong mảng là: $soLonThuHai";
 
     //22
     function timSoLonThuHai($mang) {
