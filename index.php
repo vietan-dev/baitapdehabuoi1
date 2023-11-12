@@ -265,24 +265,29 @@
     echo "Số lớn thứ hai trong mảng là: $soLonThuHai";
 
     //22
-    function timSoLonThuHai($mang) {
-        // Sắp xếp mảng theo thứ tự giảm dần
-        rsort($mang);
-        
-        // Lấy phần tử lớn thứ hai
-        $soLonThuHai = $mang[1];
-        
-        return $soLonThuHai;
+    function timUSCLN($a, $b) {
+        while ($b != 0) {
+            $temp = $b;
+            $b = $a % $b;
+            $a = $temp;
+        }
+        return $a;
     }
-
-    // Mảng ví dụ
-    $mangDuLieu = array(5, 2, 8, 1, 6);
-
-    // Gọi hàm để tìm số lớn thứ hai
-    $soLonThuHai = timSoLonThuHai($mangDuLieu);
-
-    // Hiển thị kết quả
-    echo "Số lớn thứ hai trong mảng là: $soLonThuHai";
+    
+    function timBSCNN($a, $b) {
+        return ($a * $b) / timUSCLN($a, $b);
+    }
+    
+    // Hai số nguyên dương ví dụ
+    $so1 = 12;
+    $so2 = 18;
+    
+    // Tìm và hiển thị USCLN và BSCNN
+    $uscln = timUSCLN($so1, $so2);
+    $bscnn = timBSCNN($so1, $so2);
+    
+    echo "Ước số chung lớn nhất của $so1 và $so2 là: $uscln\n";
+    echo "Bội số chung nhỏ nhất của $so1 và $so2 là: $bscnn\n";
 
     //23
     function kiemTraSoHoanHao($so) {
