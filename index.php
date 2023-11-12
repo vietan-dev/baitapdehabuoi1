@@ -116,25 +116,25 @@
     }
 
     //cau 12
-    // function hadnleInsertElement ($element, $position, $arr){
-    //     $lengthArr = count($arr);
-    //     $index = $position - 1;
-    //     if($index > $lengthArr-1){
-    //         $index = $lengthArr;
-    //     }else if($index < 0){
-    //         $index = 0;
-    //     }
-    //     $arr1 = array_slice($arr,0, $index);
-    //     $arr2 = array_slice($arr,$index);
-    //
-    //     $resultArray = array_merge($arr1, array($element), $arr2);
-    //     echo "mang cuoi" . var_dump($resultArray) . "<br/>";
-    // }
-    //
-    // $cars = array("Volvo", "BMW", "Toyota");
-    // echo "Mang ban dau" . "<br/>";
-    // echo var_dump($cars) . "<br/>";
-    // echo "Mang sau khi chen". "<br/>";
+    function hadnleInsertElement ($element, $position, $arr){
+        $lengthArr = count($arr);
+        $index = $position - 1;
+        if($index > $lengthArr-1){
+            $index = $lengthArr;
+        }else if($index < 0){
+            $index = 0;
+        }
+        $arr1 = array_slice($arr,0, $index);
+        $arr2 = array_slice($arr,$index);
+    
+        $resultArray = array_merge($arr1, array($element), $arr2);
+        echo "mang cuoi" . var_dump($resultArray) . "<br/>";
+    }
+    
+    $cars = array("Volvo", "BMW", "Toyota");
+    echo "Mang ban dau" . "<br/>";
+    echo var_dump($cars) . "<br/>";
+    echo "Mang sau khi chen". "<br/>";
     // insertElement("vin", -1, $cars);
 
 
@@ -142,39 +142,39 @@
     // array_unique: so sánh và lấy phần tử lặp cuối cùng
     // array_diff_assoc: so sánh cả key và value
     // array_diff: so sánh value
-    // function hadnleRemoveDuplicateElement ($arr) {
-    //     $arrDuplicatesSingle = array_unique(array_diff_assoc($arr, array_unique($arr)));
-    //     return array_diff($arr, $arrDuplicatesSingle);
-    // }
-    // $cars = array("Volvo", "Volvo" , "Volvo", "Toyota");
-    // echo "Mang ban dau" . "<br/>";
-    // echo var_dump($cars) . "<br/>";
-    // echo "Mang sau khi loai bo phan tu lap". "<br/>";
-    // echo var_dump (hadnleRemoveDuplicateElement($cars));
+    function hadnleRemoveDuplicateElement ($arr) {
+        $arrDuplicatesSingle = array_unique(array_diff_assoc($arr, array_unique($arr)));
+        return array_diff($arr, $arrDuplicatesSingle);
+    }
+    $cars = array("Volvo", "Volvo" , "Volvo", "Toyota");
+    echo "Mang ban dau" . "<br/>";
+    echo var_dump($cars) . "<br/>";
+    echo "Mang sau khi loai bo phan tu lap". "<br/>";
+    echo var_dump (hadnleRemoveDuplicateElement($cars));
 
     // cau 14
-    // function handleFindIndexOfElement ($arr, $element) {
-    //     return array_search($element, $arr);
-    // }
-    // $var = "BMW";
-    // //
-    // $cars = array("Volvo", "Vin" , "BMW", "Toyota");
-    // echo "Mang ban dau" . "<br/>";
-    // echo var_dump($cars) . "<br/>";
-    // echo "Phần tử {$var} có index là: " . "<br/>";
-    // echo handleFindIndexOfElement($cars, $var);
+    function handleFindIndexOfElement ($arr, $element) {
+        return array_search($element, $arr);
+    }
+    $var = "BMW";
+    //
+    $cars = array("Volvo", "Vin" , "BMW", "Toyota");
+    echo "Mang ban dau" . "<br/>";
+    echo var_dump($cars) . "<br/>";
+    echo "Phần tử {$var} có index là: " . "<br/>";
+    echo handleFindIndexOfElement($cars, $var);
 
     // cau15
-    // $string = "hello world";
-    // $reverseString = strrev($string);
-    // echo "Chuoi dao nguoc cua {$string} la: {$reverseString}";
+    $string = "hello world";
+    $reverseString = strrev($string);
+    echo "Chuoi dao nguoc cua {$string} la: {$reverseString}";
 
     // cau 16
-    // $cars = array("Volvo", "BMW", "Toyota", "Toyota");
-    // echo "Mang ban dau" . "<br/>";
-    // echo var_dump($cars) . "<br/>";
-    // $lengthArr = count($cars);
-    // echo "So luong phan tu trong mang la: {$lengthArr}";
+    $cars = array("Volvo", "BMW", "Toyota", "Toyota");
+    echo "Mang ban dau" . "<br/>";
+    echo var_dump($cars) . "<br/>";
+    $lengthArr = count($cars);
+    echo "So luong phan tu trong mang la: {$lengthArr}";
 
     // cau 17
     $string = "12321";
