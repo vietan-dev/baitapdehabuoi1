@@ -135,7 +135,7 @@
     echo "Mang ban dau" . "<br/>";
     echo var_dump($cars) . "<br/>";
     echo "Mang sau khi chen". "<br/>";
-    // insertElement("vin", -1, $cars);
+     hadnleInsertElement("vin", -1, $cars);
 
 
     // cau 13
